@@ -1,8 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { HoveredLink, Menu, MenuItem } from "../../components/ui/navbar-menu";
-import { NavigationCardGrid, NavigationCard, WhatsNewSection } from "../../components/ui/navigation-cards-enhanced";
+import { Menu, MenuItem } from "../../components/ui/navbar-menu";
+import { NavigationCardGrid } from "../../components/ui/navigation-cards-enhanced";
 import { cn } from "../../../lib/utils";
 import { FaApple } from "react-icons/fa6";
 import { IoLogoAndroid } from "react-icons/io5";

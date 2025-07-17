@@ -2,21 +2,6 @@ import { WavyBackground } from "../../components/ui/wavy-background";
 import { Button } from "../../components/ui/moving-border";
 
 export default function Hero() {
-    const words = [
-        {
-            "text": "M"
-        },
-        {
-            "text": "V"
-        },
-        {
-            "text": "P"
-        },
-        {
-            "text": "s",
-            className: "text-blue-500 dark:text-blue-500",
-        }
-    ]
     return (
         <WavyBackground className="min-h-screen w-full" backgroundFill="white">
             <div className="flex flex-col items-center justify-center min-h-screen px-4 text-center">

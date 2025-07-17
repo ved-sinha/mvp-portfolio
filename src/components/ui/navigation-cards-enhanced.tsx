@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardDescription, CardTitle } from "./card";
-import { BentoGrid, BentoGridItem } from "./bento-grid";
+import { BentoGrid } from "./bento-grid";
 import { cn } from "../../lib/utils";
 
 // OpenAI Logo component from cards-demo-3.tsx
@@ -96,7 +96,6 @@ export const NavigationCardGrid = ({
   cards,
   title,
   description,
-  columns = 2,
   layout = 'default',
   className,
   containerClassName,

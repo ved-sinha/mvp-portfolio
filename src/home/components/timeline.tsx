@@ -1,4 +1,3 @@
-import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import TimeOne from "../../assets/timeOne.png";
 import TimeTwo from "../../assets/timeTwo.png";
