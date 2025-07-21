@@ -28,8 +28,8 @@ function Navbar({className}: {className?: string}) {
                     <Menu setActive={setActive}>
                         <div className="flex flex-row items-center justify-between w-full">
                             <div className="flex flex-row items-center space-x-20">
-                                <a href="/" className="text-2xl font-bold text-black">WorkflowAI</a>
-                                <a href="/about-us" className="cursor-pointer text-black hover:opacity-[0.9] dark:text-black">
+                                <a href="/" className="text-2xl font-bold text-black" title="WorkflowAI - Fast MVP Development">WorkflowAI</a>
+                                <a href="/about-us" className="cursor-pointer text-black hover:opacity-[0.9] dark:text-black" title="Learn more about WorkflowAI team and mission">
                                     About Us
                                 </a>
                                 <MenuItem setActive={setActive} active={active} item="Services">

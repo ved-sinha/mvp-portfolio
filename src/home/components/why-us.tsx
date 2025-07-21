@@ -65,15 +65,15 @@ export default function WhyUs() {
   const [activeCard, setActiveCard] = useState(0);
 
   return (
-    <section className="min-h-screen py-20 px-4 flex items-center bg-[#FAF9F7]">
+    <section className="min-h-screen py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 flex items-center bg-[#FAF9F7]">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-100 via-gray-600 to-gray-900 bg-clip-text text-transparent mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-100 via-gray-600 to-gray-900 bg-clip-text text-transparent mb-4"
           >
             Why Choose Us?
           </motion.h2>
@@ -81,7 +81,7 @@ export default function WhyUs() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 sm:px-0"
           >
             We're not just another agency. We're your strategic partner in digital transformation, 
             delivering exceptional results that drive real business growth.
@@ -143,18 +143,18 @@ export default function WhyUs() {
                         <div className="absolute bottom-10 left-10 w-24 h-24 rounded-full bg-white/20"></div>
                       </div>
                       
-                      <CardHeader className="pb-6 pt-12 relative z-10">
-                        <CardTitle className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+                      <CardHeader className="pb-4 sm:pb-6 pt-8 sm:pt-12 px-4 sm:px-6 relative z-10">
+                        <CardTitle className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6">
                           {item.title}
                         </CardTitle>
-                        <CardDescription className="text-xl text-white/90 font-medium mb-4">
+                        <CardDescription className="text-base sm:text-lg md:text-xl text-white/90 font-medium mb-4">
                           {item.subtitle}
                         </CardDescription>
                       </CardHeader>
                       
-                      <CardContent className="pt-0 pb-12 relative z-10">
+                      <CardContent className="pt-0 pb-8 sm:pb-12 px-4 sm:px-6 relative z-10">
                         {item.description && (
-                          <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
+                          <p className="text-sm sm:text-base md:text-lg text-white/80 leading-relaxed max-w-2xl">
                             {item.description}
                           </p>
                         )}
@@ -166,7 +166,7 @@ export default function WhyUs() {
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="inline-block mt-8 px-8 py-4 bg-white text-gray-900 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                          className="inline-block mt-6 sm:mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-white text-gray-900 rounded-full text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                         >
                           Learn More
                         </motion.a>

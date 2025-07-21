@@ -1,28 +1,27 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FiBatteryCharging, FiWifi } from "react-icons/fi";
 
 export const DrawCircleText = () => {
   return (
-    <div className="bg-[#FAF9F7] px-4 py-24 text-black-900">
+    <div className="bg-[#FAF9F7] px-4 sm:px-6 md:px-8 py-16 sm:py-20 md:py-24 text-black-900">
       <div className="mx-auto max-w-7xl">
-        {/* 3/4 and 1/4 column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-center">
+        {/* Responsive layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-12 items-center">
           {/* First Column - Text (3/4 width) */}
-          <div className="lg:col-span-3 text-center lg:text-left space-y-6">
+          <div className="lg:col-span-3 text-center lg:text-left space-y-4 sm:space-y-6">
             {/* Limited time offer tag */}
-            <div className="inline-block bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-medium">
+            <div className="inline-block bg-orange-500 text-white px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium">
               Limited time offer
             </div>
             
             {/* Main headline */}
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
               40% off this month on<br />
               <span className="text-violet-600">MVP Development</span>
             </h2>
             
             {/* Description */}
-            <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Transform your ideas into reality with our expert MVP development services. 
               Get your product to market faster with professional design, development, and launch support.
             </p>
@@ -32,19 +31,19 @@ export const DrawCircleText = () => {
               href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+              className="inline-block bg-gray-800 text-white px-6 sm:px-8 py-3 rounded-lg text-sm sm:text-base font-medium hover:bg-gray-700 transition-colors"
             >
               Get 40% off
             </a>
           </div>
           
           {/* Second Column - Floating Phone (1/4 width) */}
-          <div className="lg:col-span-1 flex justify-center lg:justify-end">
+          <div className="lg:col-span-1 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <FloatingPhone />
           </div>
         </div>
       </div>
-      <hr className="border-gray-200 mt-40" />a
+      <hr className="border-gray-200 mt-20 sm:mt-32 md:mt-40" />
     </div>
   );
 };
@@ -56,7 +55,7 @@ const FloatingPhone = () => {
         transformStyle: "preserve-3d",
         transform: "rotateY(-30deg) rotateX(15deg)",
       }}
-      className="rounded-[24px] bg-violet-500"
+      className="rounded-[24px] bg-violet-500 scale-75 sm:scale-90 md:scale-100"
     >
       <motion.div
         initial={{
@@ -71,7 +70,7 @@ const FloatingPhone = () => {
           duration: 2,
           ease: "easeInOut",
         }}
-        className="relative h-96 w-56 rounded-[24px] border-2 border-b-4 border-r-4 border-white border-l-neutral-200 border-t-neutral-200 bg-neutral-900 p-1 pl-[3px] pt-[3px]"
+        className="relative h-80 w-48 sm:h-96 sm:w-56 rounded-[24px] border-2 border-b-4 border-r-4 border-white border-l-neutral-200 border-t-neutral-200 bg-neutral-900 p-1 pl-[3px] pt-[3px]"
       >
         <HeaderBar />
         <Screen />

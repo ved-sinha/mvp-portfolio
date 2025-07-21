@@ -37,39 +37,59 @@ export function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
   return (
-    <div className="h-screen w-full bg-white dark:bg-neutral-950 flex flex-col justify-center items-center px-4 md:px-8 lg:px-10 mt-40">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema)
+        }}
+      />
+      <div className="min-h-screen w-full bg-white dark:bg-neutral-950 flex flex-col justify-center items-center px-4 sm:px-6 md:px-8 lg:px-10 py-12 sm:py-16 md:py-20 mt-20 sm:mt-32 md:mt-40">
       <div className="w-full max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black dark:text-white mb-4 sm:mb-6">
             FAQs
           </h2>
-          <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-neutral-700 dark:text-neutral-300 max-w-2xl mx-auto px-4 sm:px-0">
             Get answers to your most pressing questions about our MVP development process.
           </p>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-0 mb-16">
+        <div className="space-y-0 mb-12 sm:mb-16">
           {faqData.map((item, index) => (
             <div key={index} className="border-b border-neutral-200 dark:border-neutral-800">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex items-center justify-between py-6 text-left hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-200"
+                className="w-full flex items-center justify-between py-4 sm:py-6 px-2 sm:px-0 text-left hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors duration-200"
               >
-                <h3 className="text-lg md:text-xl font-semibold text-black dark:text-white pr-4">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-black dark:text-white pr-4">
                   {item.question}
                 </h3>
                 <IoChevronDown 
-                  className={`w-5 h-5 text-neutral-500 transition-transform duration-200 ${
+                  className={`w-4 h-4 sm:w-5 sm:h-5 text-neutral-500 transition-transform duration-200 flex-shrink-0 ${
                     openIndex === index ? 'rotate-180' : ''
                   }`}
                 />
               </button>
               {openIndex === index && (
-                <div className="pb-6 pr-4">
-                  <p className="text-neutral-700 dark:text-neutral-300 text-base md:text-lg leading-relaxed">
+                <div className="pb-4 sm:pb-6 px-2 sm:px-0 pr-4">
+                  <p className="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base md:text-lg leading-relaxed">
                     {item.answer}
                   </p>
                 </div>
@@ -84,7 +104,7 @@ export function FAQ() {
             Still have questions?
           </h3>
           <p className="text-neutral-700 dark:text-neutral-300 text-lg mb-8">
-            We're here to help you with any inquiries.
+            We're here to help you with any inquiries. Check out our <a href="/services" className="text-purple-600 hover:text-purple-800 underline" title="Explore our development services">services</a> or view our <a href="/pricing" className="text-purple-600 hover:text-purple-800 underline" title="See our pricing plans">pricing</a>.
           </p>
           <a 
             href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true"
@@ -97,5 +117,6 @@ export function FAQ() {
         </div>
       </div>
     </div>
+    </>
   );
 }

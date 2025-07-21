@@ -81,7 +81,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ className }) => {
       const progress = currentStep / steps;
       const easeOutQuart = 1 - Math.pow(1 - progress, 4); // Smooth easing
 
-      const newCounts = stats.map((stat, index) => {
+      const newCounts = stats.map((stat) => {
         const targetValue = stat.value;
         const currentValue = Math.floor(targetValue * easeOutQuart);
         return currentValue;
@@ -100,30 +100,30 @@ const StatsSection: React.FC<StatsSectionProps> = ({ className }) => {
     <section 
       ref={sectionRef}
       className={cn(
-        "py-20 px-4 bg-white",
+        "py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white",
         className
       )}
     >
-      <div className="max-w-6xl mx-auto mt-30">
+      <div className="max-w-6xl mx-auto mt-12 sm:mt-20 md:mt-30">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <Card key={index} className="border-0 shadow-none bg-transparent">
-              <CardContent className="text-center p-0">
+              <CardContent className="text-center p-4 sm:p-0">
                 {/* Large Statistic */}
-                <div className="mb-4">
-                  <span className="text-5xl md:text-6xl font-bold text-gray-900">
+                <div className="mb-3 sm:mb-4">
+                  <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
                     {formatNumber(counts[index])}
                   </span>
                   {stat.suffix && (
-                    <span className="text-5xl md:text-6xl font-bold text-gray-900">
+                    <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
                       {stat.suffix}
                     </span>
                   )}
                 </div>
                 
                 {/* Description */}
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                   {stat.description}
                 </p>
               </CardContent>

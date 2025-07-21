@@ -8,14 +8,16 @@ export function TimelineSection() {
     {
       title: "First Week",
       content: (
-        <div className="md:-mt-32 md:mb-32">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="sm:-mt-16 md:-mt-32 mb-16 sm:mb-24 md:mb-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <img
               src={TimeOne}
-              alt="startup template"
+              alt="First week of MVP development - project planning, wireframing, and initial setup phase"
               width={500}
               height={500}
-              className="h-100 w-full rounded-lg object-cover md:h-96 lg:h-[800px]"
+              className="h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[800px] w-full rounded-lg object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -24,14 +26,16 @@ export function TimelineSection() {
     {
       title: "Second Week",
       content: (
-        <div className="md:-mt-32">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="sm:-mt-16 md:-mt-32 mb-16 sm:mb-24 md:mb-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <img
               src={TimeTwo}
-              alt="hero template"
+              alt="Second week of MVP development - core feature development and backend implementation"
               width={500}
               height={500}
-              className="h-100 w-full rounded-lg object-cover md:h-96 lg:h-[800px]"
+              className="h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[800px] w-full rounded-lg object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -40,14 +44,16 @@ export function TimelineSection() {
     {
       title: "Final Week",
       content: (
-        <div className="md:-mt-32">
-          <div className="grid grid-cols-2 gap-4">
+        <div className="sm:-mt-16 md:-mt-32 mb-16 sm:mb-24 md:mb-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <img
               src={TimeThree}
-              alt="hero template"
+              alt="Final week of MVP development - testing, deployment, and launch preparation"
               width={500}
               height={500}
-              className="h-100 w-full rounded-lg object-cover md:h-96 lg:h-[800px]"
+              className="h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[800px] w-full rounded-lg object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
