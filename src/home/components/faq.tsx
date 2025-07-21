@@ -38,7 +38,7 @@ export function FAQ() {
   };
 
   return (
-    <div className="h-screen w-full bg-white dark:bg-neutral-950 flex flex-col justify-center items-center px-4 md:px-8 lg:px-10">
+    <div className="h-screen w-full bg-white dark:bg-neutral-950 flex flex-col justify-center items-center px-4 md:px-8 lg:px-10 mt-40">
       <div className="w-full max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -86,9 +86,14 @@ export function FAQ() {
           <p className="text-neutral-700 dark:text-neutral-300 text-lg mb-8">
             We're here to help you with any inquiries.
           </p>
-          <button className="px-8 py-3 border-2 border-black dark:border-white text-black dark:text-white font-semibold rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200">
+          <a 
+            href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 border-2 border-black dark:border-white text-black dark:text-white font-semibold rounded-lg hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors duration-200"
+          >
             Contact
-          </button>
+          </a>
         </div>
       </div>
     </div>

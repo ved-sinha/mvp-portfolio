@@ -75,11 +75,19 @@ function Navbar({className}: {className?: string}) {
                                         style={{ width: '100vw', margin: 0, padding: '1.5rem', borderTop: 'none' }}
                                     />
                                 </MenuItem>
-                                <a href="/pricing" className="cursor-pointer text-black hover:opacity-[0.9] dark:text-black">
+                                <button 
+                                    onClick={() => {
+                                        const pricingSection = document.getElementById('pricing-section');
+                                        if (pricingSection) {
+                                            pricingSection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
+                                    className="cursor-pointer text-black hover:opacity-[0.9] dark:text-black"
+                                >
                                     Pricing
-                                </a>
+                                </button>
                             </div>
-                            <a href="/" className="bg-black text-white px-4 py-2 rounded-full">Book a Call</a>
+                            <a href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 transition-colors">Book a Call</a>
                         </div>
                     </Menu>
                 </div>
@@ -151,7 +159,7 @@ function Navbar({className}: {className?: string}) {
                                             AI Solutions
                                         </a>
                                         <a 
-                                            href="/services" 
+                                            href="/web" 
                                             className="flex items-center px-6 py-3 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
@@ -161,17 +169,24 @@ function Navbar({className}: {className?: string}) {
                                     </div>
                                 </div>
                                 
-                                <a 
-                                    href="/pricing" 
-                                    className="block px-4 py-3 text-black hover:bg-gray-50 transition-colors border-t border-gray-100"
-                                    onClick={() => setMobileMenuOpen(false)}
+                                <button 
+                                    onClick={() => {
+                                        const pricingSection = document.getElementById('pricing-section');
+                                        if (pricingSection) {
+                                            pricingSection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                        setMobileMenuOpen(false);
+                                    }}
+                                    className="block w-full text-left px-4 py-3 text-black hover:bg-gray-50 transition-colors border-t border-gray-100"
                                 >
                                     Pricing
-                                </a>
+                                </button>
                                 
                                 <div className="border-t border-gray-100 p-4">
                                     <a 
-                                        href="/" 
+                                        href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true" 
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="block w-full bg-black text-white text-center px-4 py-3 rounded-full hover:bg-gray-800 transition-colors"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >

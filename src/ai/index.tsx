@@ -18,13 +18,17 @@ export default function Ai() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a 
-                                    href="/pricing" 
+                                    href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true" 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="bg-black text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition-colors text-center"
                                 >
                                     Get Started
                                 </a>
                                 <a 
-                                    href="/" 
+                                    href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true" 
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="border-2 border-black text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-black hover:text-white transition-colors text-center"
                                 >
                                     Learn More
@@ -310,16 +314,12 @@ export default function Ai() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a 
-                            href="/pricing" 
-                            className="bg-white text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
-                        >
-                            View AI Pricing
-                        </a>
-                        <a 
-                            href="/" 
+                            href="https://cal.com/ved-sinha-ai-mvp/30min?overlayCalendar=true" 
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
                         >
-                            Schedule Demo
+                            Book Strategy Call
                         </a>
                     </div>
                 </div>

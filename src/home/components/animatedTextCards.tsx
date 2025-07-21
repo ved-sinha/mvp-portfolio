@@ -1,8 +1,8 @@
 "use client";
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
 import SceneGif from "../../assets/Scene.gif";
- 
-const words = `You have been holding onto that idea for months, maybe years. Telling yourself you will start "someday," when you have more time, more money, or the perfect team. But here is the truth: you dont need perfect conditions. You need action. We help solo founders like you bring ambitious, complex ideas to life — in just 21 days, at a price that wont break you. No fluff, no bloat, just real progress. The difference between dreamers and doers? Doers ship.`;
+
+const words = "You’ve had the idea long enough, It’s your time to build now, We help founders launch in 21 days, No delays no fluff just results, Real products shipped fast and clean."
  
 export function AnimatedTextCards() {
   return (

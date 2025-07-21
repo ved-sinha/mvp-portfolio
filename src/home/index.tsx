@@ -1,19 +1,27 @@
 import Hero from "./components/hero";
 import Navigation from "./components/navigation";
-import VideoSection from "./components/video-section";
 import { AnimatedTextCards } from "./components/animatedTextCards";
 import { TimelineSection } from "./components/timeline";
-import { TextReveal } from "./components/textReveal";
 import { FAQ } from "./components/faq";
+import WhyUs from "./components/why-us";
+import { DrawCircleText } from "./components/feature2";
+import PaymentSection from "./components/feature3";
+import StatsSection from "./components/feature4";
+import PricingCard from "./components/pricing";
 export default function Home() {
     return (
         <>
             <Navigation />
             <Hero />
-            <VideoSection />
-            <AnimatedTextCards />
+            <DrawCircleText />
+            <PaymentSection />
+            <StatsSection />
             <TimelineSection />
-            <TextReveal />
+            <AnimatedTextCards />
+            <WhyUs />
+            <div id="pricing-section">
+                <PricingCard />
+            </div>
             <FAQ />
         </>
     )

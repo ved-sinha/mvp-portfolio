@@ -6,6 +6,7 @@ import AndroidApps from "./android-apps";
 import Pricing from "./pricing";
 import Services from "./services";
 import IosApps from "./ios-apps";
+import WebDevelopment from "./web";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/ios-apps" element={<IosApps />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/web" element={<WebDevelopment />} />
       </Routes>
     </BrowserRouter>
   )

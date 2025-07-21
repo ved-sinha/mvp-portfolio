@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "../../../lib/utils";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
 
 export const WavyBackground = ({
@@ -117,7 +117,7 @@ export const WavyBackground = ({
       )}
     >
       <canvas
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-4"
         ref={canvasRef}
         id="canvas"
         style={{
